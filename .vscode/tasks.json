@@ -1,0 +1,39 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cl.exe etkin dosyayı derle",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/EHsc",
+				"/nologo",
+				"/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"${file}",
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}","${fileDirname}\\exampleImp.c",
+				"-o",
+			   
+			   "${fileDirname}\\${fileBasenameNoExtension}.exe"
+
+
+				
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			
+			"group": "build",
+			"detail": "derleyici: cl.exe"
+
+			
+
+			
+		}
+	]    
+}
