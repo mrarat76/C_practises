@@ -12,11 +12,13 @@ enum FlowerType {
 
 // Define structs
 struct Flower {
-    int id;
+    int flowerID;
     char name[50];
     float price;
     enum FlowerType type; // Enum type field
 };
+
+int flowerCount;
 
 // Function prototypes
 void initializeFlowerDatabase();
