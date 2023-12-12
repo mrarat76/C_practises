@@ -15,8 +15,15 @@ struct User {
     char username[50];
     char password[50];
     int isAdmin; // Kullanıcının yönetici olup olmadığını belirtmek için eklenen alan
+    struct admin*admin;
+   
+    
 };
-
+struct admin {
+    char username[50];
+    char password[50];
+    int isAdmin; // Kullanıcının yönetici olup olmadığını belirtmek için eklenen alan
+};
 
 
 // Define structs

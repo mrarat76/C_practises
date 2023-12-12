@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "flowersales.h"
+#include <stdlib.h> // exit ve free işlevlerini kullanmak için
+#include <string.h> // strcmp ve strcpy işlevlerini kullanmak için
 
 // Define a struct array to store flower data
 
@@ -21,6 +23,23 @@ void loadFlowerDataFromFile() {
 
     fclose(file);
 }
+const char* getFlowerTypeName(enum FlowerType type) {
+    switch (type) {
+        case ROSE:
+            return "ROSE";
+        case TULIP:
+            return "TULIP";
+        case LILY:
+            return "LILY";
+        case DAISY:
+            return "DAISY";
+        case SUNFLOWER:
+            return "SUNFLOWER";
+        default:
+            return "UNKNOWN";
+    }
+}
+
 
 
 void addFlower(int flowerID, char *name, float price, enum FlowerType type, int stock) {
@@ -40,11 +59,12 @@ void findFlower(int flowerID) {
     int i;
     for (i = 0; i < flowerCount; i++) {
         if (flowerDatabase[i].flowerID == flowerID) {
-            printf("Çiçek ID: %d\n", flowerDatabase[i].flowerID);
-            printf("Çiçek Adı: %s\n", flowerDatabase[i].name);
-            printf("Çiçek Fiyatı: %.2f\n", flowerDatabase[i].price);
-            printf("Çiçek Türü: %d\n", flowerDatabase[i].type);
-            printf("Çiçek Stok Miktarı: %d\n", flowerDatabase[i].stock);
+            printf("Flower ID: %d\n", flowerDatabase[i].flowerID);
+            printf("Flower Name: %s\n", flowerDatabase[i].name);
+            printf("Flower Price: %.2f\n", flowerDatabase[i].price);
+            printf("Flower Type: %d\n", flowerDatabase[i].type);
+            printf("Flower Type Name: %s\n", getFlowerTypeName(flowerDatabase[i].type));
+            printf("Flower stock quantity: %d\n", flowerDatabase[i].stock);
             return;
         }
     }

@@ -206,6 +206,7 @@ int main() {
                                 printf("Flower Price: %.2f\n", flowerDatabase[i].price);
                                 printf("Flower Type: %d\n", flowerDatabase[i].type);
                                 printf("Flower stock value: %d\n", flowerDatabase[i].stock);
+                                printf("Flower Type Name: %s\n", getFlowerTypeName(flowerDatabase[i].type));
                                 printf("\n");
                             }
                             break;
@@ -415,6 +416,7 @@ int main() {
                                 printf("Flower Price: %.2f\n", flowerDatabase[i].price);
                                 printf("Flower Type: %d\n", flowerDatabase[i].type);
                                 printf("Flower Stock Quantity: %d\n", flowerDatabase[i].stock);
+                                printf("Flower Type Name: %s\n", getFlowerTypeName(flowerDatabase[i].type));
                                 printf("\n");
                             }
                             break;
@@ -427,6 +429,7 @@ int main() {
                                 printf("Flower Price: %.2f\n", flowerorderdb[i].price);
                                 printf("Flower Type: %d\n", flowerorderdb[i].type);
                                 printf("The stock quantity of the ordered flower: %d\n", flowerorderdb[i].stock);
+                                printf("Flower Type Name: %s\n", getFlowerTypeName(flowerDatabase[i].type));
                                 printf("\n");
                             }
                             break;
